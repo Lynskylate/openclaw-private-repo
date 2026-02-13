@@ -213,3 +213,4 @@ When you need more detail:
 - Default scrape interval: 1 minute
 - Logs retention depends on disk space (not currently documented)
 - Time zones: All timestamps in UTC (ISO 8601 format)
+<!-- skill-write-check-1770959437 -->

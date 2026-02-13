@@ -339,3 +339,9 @@ cron action=run jobId=<任务ID>
 # 禁用/启用任务
 cron action=update jobId=<任务ID> patch='{"enabled": false}'
 ```
+<!-- BEGIN OPENCLAW MANAGED TOOL ROUTING -->
+## Web 检索与浏览策略（OpenClaw 管理）
+- 禁用 OpenClaw 原生 `web_search` 与 `browser` 工具
+- 需要联网检索时必须使用：`$tavily`
+- 需要网页交互/截图时必须使用：`$playwright-cli`
+<!-- END OPENCLAW MANAGED TOOL ROUTING -->
