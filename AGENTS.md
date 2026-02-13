@@ -117,6 +117,25 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
 
+### 🔧 Self-Troubleshooting
+
+**Self-monitoring and diagnostic capabilities:**
+
+I can troubleshoot myself using the VictoriaMetrics monitoring stack. See **[docs/self-troubleshooting.md](docs/self-troubleshooting.md)** for:
+
+- Querying my own metrics (traffic, errors, performance)
+- Searching my logs (VictoriaLogs @ localhost:8429)
+- Tracing requests (VictoriaTraces @ prometheus.local:9428)
+- Common troubleshooting workflows
+- Known issues and solutions
+
+**Quick reference:**
+- Health: `curl http://prometheus.local:8428/health && curl http://localhost:8429/health`
+- Gateway logs: `curl -G "http://localhost:8429/select/logsql/query" --data-urlencode 'query={container_name="openclaw-gateway"}'`
+- Metrics: `curl "http://prometheus.local:8428/api/v1/query?query=up"`
+
+_When investigating issues, check self-troubleshooting.md first!_
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
@@ -211,6 +230,57 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
 
+---
+
+## 🐛 常见问题速查表
+
+### Feishu 文档操作
+
+**何时查阅**:
+- Wiki 文档内容显示为纯文本
+- `write` 或 `update_block` 返回 400 错误
+- 需要创建有层级结构的文档
+
+**解决步骤**:
+1. 查看 `docs/feishu-wiki-guide.md`
+2. 使用 `feishu_doc append` 而不是 `write`/`update_block`
+3. 使用正确的 Markdown 语法（标题、列表、粗体等）
+
+**Skill**: feishu-doc, feishu-wiki
+
+---
+
+### VictoriaMonitoring 查询
+
+**何时查阅**:
+- VictoriaLogs 端口 9428 无法访问
+- 日志查询 API 失败
+- 需要查询 metrics/logs/traces
+
+**解决步骤**:
+1. 查看 `docs/self-troubleshooting.md`
+2. 使用正确的端口：VictoriaLogs (8429), VictoriaTraces (9428)
+3. 使用正确的查询格式：GET + URL encoding
+
+**Skill**: victoria-monitoring
+
+---
+
+### 自我排查和诊断
+
+**何时查阅**:
+- 工具调用失败（read, write, exec）
+- 需要查询自己的日志和指标
+- 需要排查服务问题
+
+**解决步骤**:
+1. 查看 `docs/self-troubleshooting.md`
+2. 使用 VictoriaMetrics/VictoriaLogs/VictoriaTraces
+3. 查询本地日志文件
+
+**Skill**: victoria-monitoring, healthcheck
+
+---
 
 ## 📚 Feishu 文档管理
 
@@ -219,18 +289,53 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 
 ### 快速参考
 
-**创建 Wiki 文档**:
-1. 使用 `feishu_wiki create` 创建节点（**不**指定 `parent_node_token`）
-2. 使用 `feishu_doc append` 写入 Markdown 内容（**不要**用 `update_block`）
-3. 使用 `list_blocks` 验证渲染结果
+**创建目录结构**（如 `每日github热点/2026-02-12`）:
+1. 先创建父目录节点：`feishu_wiki create`（不指定 `parent_node_token`）
+2. 再创建子文档节点：`feishu_wiki create`（**指定** `parent_node_token` 为父节点的 node_token）
+3. 使用 `feishu_doc append` 写入 Markdown 内容（**不要**用 `update_block`）
+4. 使用 `list_blocks` 验证渲染结果
 
 **关键规则**:
 - ✅ 使用 `append` 而不是 `write`（Wiki 文档限制）
 - ✅ 使用 `append` 而不是 `update_block`（Markdown 渲染需要）
-- ❌ 不要指定 `parent_node_token`（会导致 400 错误）
+- ✅ 创建子节点时**可以**指定 `parent_node_token`（使用正确的 node_token）
 - ❌ 不要使用 Markdown 表格（不支持）
+- ⚠️ 如果 `append` 内容太长导致 400 错误，分批追加
 
 **成功案例**: https://qcnxu5ciwz8e.feishu.cn/wiki/H1BywLXG8iziObksbfQc4hPNnNb
 **详细文档**: `workspace/docs/feishu-wiki-guide.md`
 
 _更新: 2026-02-12_
+
+---
+
+## ⏰ 定时任务
+
+### 1. 每日 workspace 文档提交 (凌晨2点)
+- 自动检查 workspace 中的文档变化
+- 执行 `git add .`、`git commit`、`git push`
+- 通知变更的文件列表
+- 任务 ID: `8d69c558-c30c-4336-901b-88ad309b2adc`
+
+### 2. 每日 GitHub 热点分析 (早上8点)
+- 自动收集前一天 GitHub Trending 热门项目（15个）
+- 在"每日github热点"目录下创建新文档（格式：YYYY-MM-DD）
+- 分析技术栈分布和分类
+- **重点**：提供技术趋势洞察和热点方向分析
+- 任务 ID: `7d9810e8-c93c-4bf6-a6f4-a2a251fcdd4f`
+
+### 管理
+
+```bash
+# 查看所有定时任务
+cron action=list
+
+# 查看任务运行历史
+cron action=runs jobId=<任务ID>
+
+# 手动触发任务
+cron action=run jobId=<任务ID>
+
+# 禁用/启用任务
+cron action=update jobId=<任务ID> patch='{"enabled": false}'
+```
