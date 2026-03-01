@@ -11,9 +11,9 @@ from pathlib import Path
 
 # 添加 workspace 路径
 workspace_path = Path("/opt/openclaw/.openclaw/workspace")
-sys.path.insert(0, str(workspace_path / "skills" / "tavily"))
+sys.path.insert(0, str(workspace_path / "skills" / "tavily" / "scripts"))
 
-from tavily_scripts.tavily_search import search as tavily_search
+from tavily_search import search as tavily_search
 
 # Blog 配置
 BLOGS = {
@@ -86,28 +86,64 @@ def search_recent_posts(blog_key, hours=24):
 def fetch_article_content(url, use_proxy=True):
     """获取文章的完整内容（通过代理）"""
     import subprocess
+    try:
+        from readability import Document
+        has_readability = True
+    except ImportError:
+        has_readability = False
     
     print(f"📥 抓取文章: {url}")
     
-    # 使用 web_fetch (通过代理)
-    proxy_arg = f"--proxy={PROXY_URL}" if use_proxy else ""
-    cmd = f"web_fetch {proxy_arg} {url}"
+    # 使用 curl 获取 HTML (通过代理)
+    proxy_arg = f"-x {PROXY_URL}" if use_proxy else ""
     
     try:
+        # 使用 curl 获取页面内容
+        curl_cmd = ["curl", "-s", "-L", "-A", "Mozilla/5.0"]
+        if use_proxy:
+            curl_cmd.extend(["-x", PROXY_URL])
+        curl_cmd.append(url)
+        
         result = subprocess.run(
-            cmd,
-            shell=True,
+            curl_cmd,
             capture_output=True,
             text=True,
             timeout=60
         )
         
         if result.returncode == 0:
-            content = result.stdout
+            html_content = result.stdout
+            
+            # 如果有 readability，提取主要内容
+            if has_readability:
+                doc = Document(html_content)
+                content = doc.summary()
+                # 简单的 HTML 转 Markdown
+                import re
+                # 移除 script 和 style
+                content = re.sub(r'<script[^>]*>.*?</script>', '', content, flags=re.DOTALL | re.IGNORECASE)
+                content = re.sub(r'<style[^>]*>.*?</style>', '', content, flags=re.DOTALL | re.IGNORECASE)
+                # 转换一些基本标签
+                content = re.sub(r'<h([1-6])[^>]*>(.*?)</h\1>', r'\n\#\# \2\n', content, flags=re.DOTALL)
+                content = re.sub(r'<strong[^>]*>(.*?)</strong>', r'**\1**', content, flags=re.DOTALL)
+                content = re.sub(r'<b[^>]*>(.*?)</b>', r'**\1**', content, flags=re.DOTALL)
+                content = re.sub(r'<p[^>]*>(.*?)</p>', r'\1\n\n', content, flags=re.DOTALL)
+                content = re.sub(r'<br\s*/?>', '\n', content)
+                content = re.sub(r'<[^>]+>', '', content)  # 移除剩余标签
+                content = content.strip()
+            else:
+                # 简单提取：移除 HTML 标签
+                import re
+                content = re.sub(r'<script[^>]*>.*?</script>', '', html_content, flags=re.DOTALL | re.IGNORECASE)
+                content = re.sub(r'<style[^>]*>.*?</style>', '', content, flags=re.DOTALL | re.IGNORECASE)
+                content = re.sub(r'<[^>]+>', '\n', content)
+                content = re.sub(r'\n\s*\n', '\n\n', content)
+                content = content.strip()
+            
             print(f"✅ 成功抓取，长度: {len(content)} 字符")
             return content
         else:
-            print(f"❌ 抓取失败: {result.stderr}")
+            print(f"❌ curl 失败: {result.stderr}")
             return None
             
     except subprocess.TimeoutExpired:

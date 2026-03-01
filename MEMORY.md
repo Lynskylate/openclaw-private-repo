@@ -26,16 +26,23 @@
 - **Web & Data**: tavily, web_fetch
 - **Utilities**: weather, skill-creator, canvas, tts, message
 
-### Self-Improvement System (2026-02-13)
+### Self-Improvement System (2026-02-13 → 2026-02-28)
 
 **Daily Personal Reports**:
 - **Schedule**: Every day at 23:00 (Asia/Shanghai)
 - **Job ID**: 2db82cb3-ef06-4766-8c37-92f5e529a490
-- **Location**: Feishu 知识库 / 首页/日报/YYYY-MM-DD
+- **Location**: Feishu 知识库 / 日报/YYYY-MM-DD
 - **Content**: Task summary, self-reflection, improvements, metrics, tomorrow's plan
+- **Fallback**: Local memory files + Git when Feishu API fails
 
 **Key Learnings**:
 - VictoriaLogs runs on localhost:8429 (NOT 9428 - that's VictoriaTraces)
 - Correct query format: `curl -G "http://localhost:8429/select/logsql/query" --data-urlencode 'query=...'`
-- Feishu Wiki API: `write` works for simple content, but read operations often return 400
+- Feishu Wiki API: Both `write` and `append` return 400 errors consistently (2026-02-28)
 - Self-troubleshooting guide created at `docs/self-troubleshooting.md` (11.9 KB)
+
+**Ongoing Issues (2026-02-28)**:
+- Feishu API persistent 400 errors - nodes can be created but content write fails
+- tavily_search.py path issues in exec environment
+- Sub-agent communication timeouts
+- Need API fallback strategy (local + Git)
