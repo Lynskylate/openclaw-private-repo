@@ -1,0 +1,482 @@
+- generic [ref=e2]:
+  - region
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+        - generic [ref=e13]:
+          - navigation "Global" [ref=e16]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - button "Platform" [ref=e20] [cursor=pointer]:
+                  - text: Platform
+                  - img [ref=e21]
+              - listitem [ref=e23]:
+                - button "Solutions" [ref=e25] [cursor=pointer]:
+                  - text: Solutions
+                  - img [ref=e26]
+              - listitem [ref=e28]:
+                - button "Resources" [ref=e30] [cursor=pointer]:
+                  - text: Resources
+                  - img [ref=e31]
+              - listitem [ref=e33]:
+                - button "Open Source" [ref=e35] [cursor=pointer]:
+                  - text: Open Source
+                  - img [ref=e36]
+              - listitem [ref=e38]:
+                - button "Enterprise" [ref=e40] [cursor=pointer]:
+                  - text: Enterprise
+                  - img [ref=e41]
+              - listitem [ref=e43]:
+                - link "Pricing" [ref=e44] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+                  - generic [ref=e45]: Pricing
+          - generic [ref=e46]:
+            - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+              - img [ref=e51]
+            - link "Sign in" [ref=e54] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Ftrending
+            - link "Sign up" [ref=e55] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Ftrending&source=header
+            - button "Appearance settings" [ref=e58] [cursor=pointer]:
+              - img
+  - main [ref=e61]:
+    - navigation "Explore navigation" [ref=e63]:
+      - generic [ref=e64]:
+        - link "Explore" [ref=e65] [cursor=pointer]:
+          - /url: /explore
+        - link "Topics" [ref=e66] [cursor=pointer]:
+          - /url: /topics
+        - link "Trending" [ref=e67] [cursor=pointer]:
+          - /url: /trending
+        - link "Collections" [ref=e68] [cursor=pointer]:
+          - /url: /collections
+        - link "Events" [ref=e69] [cursor=pointer]:
+          - /url: /events
+        - link "GitHub Sponsors" [ref=e70] [cursor=pointer]:
+          - /url: /sponsors/explore
+    - generic [ref=e72]:
+      - heading "Trending" [level=1] [ref=e73]
+      - paragraph [ref=e74]: See what the GitHub community is most excited about today.
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - navigation "Trending" [ref=e78]:
+          - link "Repositories" [ref=e79] [cursor=pointer]:
+            - /url: /trending
+          - link "Developers" [ref=e80] [cursor=pointer]:
+            - /url: /trending/developers
+        - generic [ref=e81]:
+          - group [ref=e83]:
+            - 'button "Spoken Language: Any" [ref=e84] [cursor=pointer]'
+          - group [ref=e86]:
+            - 'button "Language: Any" [ref=e87] [cursor=pointer]'
+          - group [ref=e89]:
+            - 'button "Date range: Today" [ref=e90] [cursor=pointer]'
+      - generic [ref=e91]:
+        - article [ref=e92]:
+          - link "You must be signed in to star a repository" [ref=e95] [cursor=pointer]:
+            - /url: /login?return_to=%2Fruvnet%2Fwifi-densepose
+            - img [ref=e96]
+            - text: Star
+          - heading "ruvnet / wifi-densepose" [level=2] [ref=e98]:
+            - link "ruvnet / wifi-densepose" [ref=e99] [cursor=pointer]:
+              - /url: /ruvnet/wifi-densepose
+              - img [ref=e100]
+              - text: ruvnet / wifi-densepose
+          - paragraph [ref=e102]: WiFi DensePose turns commodity WiFi signals into real-time human pose estimation, vital sign monitoring, and presence detection — all without a single pixel of video.
+          - generic [ref=e103]:
+            - generic [ref=e104]: Rust
+            - link "star 21,798" [ref=e106] [cursor=pointer]:
+              - /url: /ruvnet/wifi-densepose/stargazers
+              - img "star" [ref=e107]
+              - text: 21,798
+            - link "fork 2,562" [ref=e109] [cursor=pointer]:
+              - /url: /ruvnet/wifi-densepose/forks
+              - img "fork" [ref=e110]
+              - text: 2,562
+            - generic [ref=e112]:
+              - text: Built by
+              - link "@ruvnet" [ref=e113] [cursor=pointer]:
+                - /url: /ruvnet
+                - img "@ruvnet" [ref=e114]
+              - link "@claude" [ref=e115] [cursor=pointer]:
+                - /url: /claude
+                - img "@claude" [ref=e116]
+              - link "@fr4iser90" [ref=e117] [cursor=pointer]:
+                - /url: /fr4iser90
+                - img "@fr4iser90" [ref=e118]
+              - link "@TropicalDog17" [ref=e119] [cursor=pointer]:
+                - /url: /TropicalDog17
+                - img "@TropicalDog17" [ref=e120]
+              - link "@zqyhimself" [ref=e121] [cursor=pointer]:
+                - /url: /zqyhimself
+                - img "@zqyhimself" [ref=e122]
+            - generic [ref=e123]:
+              - img [ref=e124]
+              - text: 5,096 stars today
+        - article [ref=e126]:
+          - link "You must be signed in to star a repository" [ref=e129] [cursor=pointer]:
+            - /url: /login?return_to=%2Fmoeru-ai%2Fairi
+            - img [ref=e130]
+            - text: Star
+          - heading "moeru-ai / airi" [level=2] [ref=e132]:
+            - link "moeru-ai / airi" [ref=e133] [cursor=pointer]:
+              - /url: /moeru-ai/airi
+              - img [ref=e134]
+              - text: moeru-ai / airi
+          - paragraph [ref=e136]: 💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.
+          - generic [ref=e137]:
+            - generic [ref=e138]: TypeScript
+            - link "star 21,368" [ref=e140] [cursor=pointer]:
+              - /url: /moeru-ai/airi/stargazers
+              - img "star" [ref=e141]
+              - text: 21,368
+            - link "fork 2,003" [ref=e143] [cursor=pointer]:
+              - /url: /moeru-ai/airi/forks
+              - img "fork" [ref=e144]
+              - text: 2,003
+            - generic [ref=e146]:
+              - text: Built by
+              - link "@nekomeowww" [ref=e147] [cursor=pointer]:
+                - /url: /nekomeowww
+                - img "@nekomeowww" [ref=e148]
+              - link "@luoling8192" [ref=e149] [cursor=pointer]:
+                - /url: /luoling8192
+                - img "@luoling8192" [ref=e150]
+              - link "@shinohara-rin" [ref=e151] [cursor=pointer]:
+                - /url: /shinohara-rin
+                - img "@shinohara-rin" [ref=e152]
+              - link "@LemonNekoGH" [ref=e153] [cursor=pointer]:
+                - /url: /LemonNekoGH
+                - img "@LemonNekoGH" [ref=e154]
+              - link "@sumimakito" [ref=e155] [cursor=pointer]:
+                - /url: /sumimakito
+                - img "@sumimakito" [ref=e156]
+            - generic [ref=e157]:
+              - img [ref=e158]
+              - text: 1,412 stars today
+        - article [ref=e160]:
+          - link "You must be signed in to star a repository" [ref=e163] [cursor=pointer]:
+            - /url: /login?return_to=%2Fanthropics%2Fprompt-eng-interactive-tutorial
+            - img [ref=e164]
+            - text: Star
+          - heading "anthropics / prompt-eng-interactive-tutorial" [level=2] [ref=e166]:
+            - link "anthropics / prompt-eng-interactive-tutorial" [ref=e167] [cursor=pointer]:
+              - /url: /anthropics/prompt-eng-interactive-tutorial
+              - img [ref=e168]
+              - text: anthropics / prompt-eng-interactive-tutorial
+          - paragraph [ref=e170]: Anthropic's Interactive Prompt Engineering Tutorial
+          - generic [ref=e171]:
+            - generic [ref=e172]: Jupyter Notebook
+            - link "star 31,559" [ref=e174] [cursor=pointer]:
+              - /url: /anthropics/prompt-eng-interactive-tutorial/stargazers
+              - img "star" [ref=e175]
+              - text: 31,559
+            - link "fork 3,210" [ref=e177] [cursor=pointer]:
+              - /url: /anthropics/prompt-eng-interactive-tutorial/forks
+              - img "fork" [ref=e178]
+              - text: 3,210
+            - generic [ref=e180]:
+              - text: Built by
+              - link "@maggie-vo" [ref=e181] [cursor=pointer]:
+                - /url: /maggie-vo
+                - img "@maggie-vo" [ref=e182]
+              - link "@jawhnycooke" [ref=e183] [cursor=pointer]:
+                - /url: /jawhnycooke
+                - img "@jawhnycooke" [ref=e184]
+            - generic [ref=e185]:
+              - img [ref=e186]
+              - text: 526 stars today
+        - article [ref=e188]:
+          - link "You must be signed in to star a repository" [ref=e191] [cursor=pointer]:
+            - /url: /login?return_to=%2Fruvnet%2Fruflo
+            - img [ref=e192]
+            - text: Star
+          - heading "ruvnet / ruflo" [level=2] [ref=e194]:
+            - link "ruvnet / ruflo" [ref=e195] [cursor=pointer]:
+              - /url: /ruvnet/ruflo
+              - img [ref=e196]
+              - text: ruvnet / ruflo
+          - paragraph [ref=e198]: 🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features enterprise-grade architecture, distributed swarm intelligence, RAG integration, and native Claude Code / Codex Integration
+          - generic [ref=e199]:
+            - generic [ref=e200]: TypeScript
+            - link "star 18,036" [ref=e202] [cursor=pointer]:
+              - /url: /ruvnet/ruflo/stargazers
+              - img "star" [ref=e203]
+              - text: 18,036
+            - link "fork 2,003" [ref=e205] [cursor=pointer]:
+              - /url: /ruvnet/ruflo/forks
+              - img "fork" [ref=e206]
+              - text: 2,003
+            - generic [ref=e208]:
+              - text: Built by
+              - link "@ruvnet" [ref=e209] [cursor=pointer]:
+                - /url: /ruvnet
+                - img "@ruvnet" [ref=e210]
+              - link "@claude" [ref=e211] [cursor=pointer]:
+                - /url: /claude
+                - img "@claude" [ref=e212]
+              - link "@alexx-ftw" [ref=e213] [cursor=pointer]:
+                - /url: /alexx-ftw
+                - img "@alexx-ftw" [ref=e214]
+              - link "@lanemc" [ref=e215] [cursor=pointer]:
+                - /url: /lanemc
+                - img "@lanemc" [ref=e216]
+              - link "@tommy-ca" [ref=e217] [cursor=pointer]:
+                - /url: /tommy-ca
+                - img "@tommy-ca" [ref=e218]
+            - generic [ref=e219]:
+              - img [ref=e220]
+              - text: 830 stars today
+        - article [ref=e222]:
+          - link "You must be signed in to star a repository" [ref=e225] [cursor=pointer]:
+            - /url: /login?return_to=%2Falibaba%2FOpenSandbox
+            - img [ref=e226]
+            - text: Star
+          - heading "alibaba / OpenSandbox" [level=2] [ref=e228]:
+            - link "alibaba / OpenSandbox" [ref=e229] [cursor=pointer]:
+              - /url: /alibaba/OpenSandbox
+              - img [ref=e230]
+              - text: alibaba / OpenSandbox
+          - paragraph [ref=e232]: OpenSandbox is a general-purpose sandbox platform for AI applications, offering multi-language SDKs, unified sandbox APIs, and Docker/Kubernetes runtimes for scenarios like Coding Agents, GUI Agents, Agent Evaluation, AI Code Execution, and RL Training.
+          - generic [ref=e233]:
+            - generic [ref=e234]: Python
+            - link "star 4,264" [ref=e236] [cursor=pointer]:
+              - /url: /alibaba/OpenSandbox/stargazers
+              - img "star" [ref=e237]
+              - text: 4,264
+            - link "fork 299" [ref=e239] [cursor=pointer]:
+              - /url: /alibaba/OpenSandbox/forks
+              - img "fork" [ref=e240]
+              - text: "299"
+            - generic [ref=e242]:
+              - text: Built by
+              - link "@Pangjiping" [ref=e243] [cursor=pointer]:
+                - /url: /Pangjiping
+                - img "@Pangjiping" [ref=e244]
+              - link "@ninan-nn" [ref=e245] [cursor=pointer]:
+                - /url: /ninan-nn
+                - img "@ninan-nn" [ref=e246]
+              - link "@hittyt" [ref=e247] [cursor=pointer]:
+                - /url: /hittyt
+                - img "@hittyt" [ref=e248]
+              - link "@jwx0925" [ref=e249] [cursor=pointer]:
+                - /url: /jwx0925
+                - img "@jwx0925" [ref=e250]
+              - link "@Spground" [ref=e251] [cursor=pointer]:
+                - /url: /Spground
+                - img "@Spground" [ref=e252]
+            - generic [ref=e253]:
+              - img [ref=e254]
+              - text: 1,026 stars today
+        - article [ref=e256]:
+          - link "You must be signed in to star a repository" [ref=e259] [cursor=pointer]:
+            - /url: /login?return_to=%2Fmicrosoft%2Fmarkitdown
+            - img [ref=e260]
+            - text: Star
+          - heading "microsoft / markitdown" [level=2] [ref=e262]:
+            - link "microsoft / markitdown" [ref=e263] [cursor=pointer]:
+              - /url: /microsoft/markitdown
+              - img [ref=e264]
+              - text: microsoft / markitdown
+          - paragraph [ref=e266]: Python tool for converting files and office documents to Markdown.
+          - generic [ref=e267]:
+            - generic [ref=e268]: Python
+            - link "star 89,584" [ref=e270] [cursor=pointer]:
+              - /url: /microsoft/markitdown/stargazers
+              - img "star" [ref=e271]
+              - text: 89,584
+            - link "fork 5,248" [ref=e273] [cursor=pointer]:
+              - /url: /microsoft/markitdown/forks
+              - img "fork" [ref=e274]
+              - text: 5,248
+            - generic [ref=e276]:
+              - text: Built by
+              - link "@afourney" [ref=e277] [cursor=pointer]:
+                - /url: /afourney
+                - img "@afourney" [ref=e278]
+              - link "@gagb" [ref=e279] [cursor=pointer]:
+                - /url: /gagb
+                - img "@gagb" [ref=e280]
+              - link "@sugatoray" [ref=e281] [cursor=pointer]:
+                - /url: /sugatoray
+                - img "@sugatoray" [ref=e282]
+              - link "@PetrAPConsulting" [ref=e283] [cursor=pointer]:
+                - /url: /PetrAPConsulting
+                - img "@PetrAPConsulting" [ref=e284]
+              - link "@l-lumin" [ref=e285] [cursor=pointer]:
+                - /url: /l-lumin
+                - img "@l-lumin" [ref=e286]
+            - generic [ref=e287]:
+              - img [ref=e288]
+              - text: 648 stars today
+        - article [ref=e290]:
+          - link "You must be signed in to star a repository" [ref=e293] [cursor=pointer]:
+            - /url: /login?return_to=%2FK-Dense-AI%2Fclaude-scientific-skills
+            - img [ref=e294]
+            - text: Star
+          - heading "K-Dense-AI / claude-scientific-skills" [level=2] [ref=e296]:
+            - link "K-Dense-AI / claude-scientific-skills" [ref=e297] [cursor=pointer]:
+              - /url: /K-Dense-AI/claude-scientific-skills
+              - img [ref=e298]
+              - text: K-Dense-AI / claude-scientific-skills
+          - paragraph [ref=e300]: A set of ready to use Agent Skills for research, science, engineering, analysis, finance and writing.
+          - generic [ref=e301]:
+            - generic [ref=e302]: Python
+            - link "star 11,051" [ref=e304] [cursor=pointer]:
+              - /url: /K-Dense-AI/claude-scientific-skills/stargazers
+              - img "star" [ref=e305]
+              - text: 11,051
+            - link "fork 1,255" [ref=e307] [cursor=pointer]:
+              - /url: /K-Dense-AI/claude-scientific-skills/forks
+              - img "fork" [ref=e308]
+              - text: 1,255
+            - generic [ref=e310]:
+              - text: Built by
+              - link "@TKassis" [ref=e311] [cursor=pointer]:
+                - /url: /TKassis
+                - img "@TKassis" [ref=e312]
+              - link "@borealBytes" [ref=e313] [cursor=pointer]:
+                - /url: /borealBytes
+                - img "@borealBytes" [ref=e314]
+              - link "@leipzig" [ref=e315] [cursor=pointer]:
+                - /url: /leipzig
+                - img "@leipzig" [ref=e316]
+              - link "@claude" [ref=e317] [cursor=pointer]:
+                - /url: /claude
+                - img "@claude" [ref=e318]
+              - link "@fedorov" [ref=e319] [cursor=pointer]:
+                - /url: /fedorov
+                - img "@fedorov" [ref=e320]
+            - generic [ref=e321]:
+              - img [ref=e322]
+              - text: 820 stars today
+        - article [ref=e324]:
+          - link "You must be signed in to star a repository" [ref=e327] [cursor=pointer]:
+            - /url: /login?return_to=%2Fsuperset-sh%2Fsuperset
+            - img [ref=e328]
+            - text: Star
+          - heading "superset-sh / superset" [level=2] [ref=e330]:
+            - link "superset-sh / superset" [ref=e331] [cursor=pointer]:
+              - /url: /superset-sh/superset
+              - img [ref=e332]
+              - text: superset-sh / superset
+          - paragraph [ref=e334]: IDE for the AI Agents Era - Run an army of Claude Code, Codex, etc. on your machine
+          - generic [ref=e335]:
+            - generic [ref=e336]: TypeScript
+            - link "star 3,488" [ref=e338] [cursor=pointer]:
+              - /url: /superset-sh/superset/stargazers
+              - img "star" [ref=e339]
+              - text: 3,488
+            - link "fork 236" [ref=e341] [cursor=pointer]:
+              - /url: /superset-sh/superset/forks
+              - img "fork" [ref=e342]
+              - text: "236"
+            - generic [ref=e344]:
+              - text: Built by
+              - link "@Kitenite" [ref=e345] [cursor=pointer]:
+                - /url: /Kitenite
+                - img "@Kitenite" [ref=e346]
+              - link "@saddlepaddle" [ref=e347] [cursor=pointer]:
+                - /url: /saddlepaddle
+                - img "@saddlepaddle" [ref=e348]
+              - link "@AviPeltz" [ref=e349] [cursor=pointer]:
+                - /url: /AviPeltz
+                - img "@AviPeltz" [ref=e350]
+              - link "@claude" [ref=e351] [cursor=pointer]:
+                - /url: /claude
+                - img "@claude" [ref=e352]
+              - link "@andreasasprou" [ref=e353] [cursor=pointer]:
+                - /url: /andreasasprou
+                - img "@andreasasprou" [ref=e354]
+            - generic [ref=e355]:
+              - img [ref=e356]
+              - text: 585 stars today
+        - article [ref=e358]:
+          - generic [ref=e359]:
+            - link "Sponsor @servo" [ref=e360] [cursor=pointer]:
+              - /url: /sponsors/servo
+              - generic [ref=e362]:
+                - img [ref=e363]
+                - text: Sponsor
+            - link "You must be signed in to star a repository" [ref=e366] [cursor=pointer]:
+              - /url: /login?return_to=%2Fservo%2Fservo
+              - img [ref=e367]
+              - text: Star
+          - heading "servo / servo" [level=2] [ref=e369]:
+            - link "servo / servo" [ref=e370] [cursor=pointer]:
+              - /url: /servo/servo
+              - img [ref=e371]
+              - text: servo / servo
+          - paragraph [ref=e373]: Servo aims to empower developers with a lightweight, high-performance alternative for embedding web technologies in applications.
+          - generic [ref=e374]:
+            - generic [ref=e375]: Rust
+            - link "star 35,746" [ref=e377] [cursor=pointer]:
+              - /url: /servo/servo/stargazers
+              - img "star" [ref=e378]
+              - text: 35,746
+            - link "fork 3,497" [ref=e380] [cursor=pointer]:
+              - /url: /servo/servo/forks
+              - img "fork" [ref=e381]
+              - text: 3,497
+            - generic [ref=e383]:
+              - text: Built by
+              - link "@emilio" [ref=e384] [cursor=pointer]:
+                - /url: /emilio
+                - img "@emilio" [ref=e385]
+              - link "@Ms2ger" [ref=e386] [cursor=pointer]:
+                - /url: /Ms2ger
+                - img "@Ms2ger" [ref=e387]
+              - link "@jdm" [ref=e388] [cursor=pointer]:
+                - /url: /jdm
+                - img "@jdm" [ref=e389]
+              - link "@dependabot" [ref=e390] [cursor=pointer]:
+                - /url: /apps/dependabot
+                - img "@dependabot" [ref=e391]
+              - link "@SimonSapin" [ref=e392] [cursor=pointer]:
+                - /url: /SimonSapin
+                - img "@SimonSapin" [ref=e393]
+            - generic [ref=e394]:
+              - img [ref=e395]
+              - text: 45 stars today
+  - contentinfo [ref=e397]:
+    - heading "Footer" [level=2] [ref=e398]
+    - generic [ref=e399]:
+      - generic [ref=e400]:
+        - link "GitHub Homepage" [ref=e401] [cursor=pointer]:
+          - /url: https://github.com
+          - img [ref=e402]
+        - generic [ref=e404]: © 2026 GitHub, Inc.
+      - navigation "Footer" [ref=e405]:
+        - heading "Footer navigation" [level=3] [ref=e406]
+        - list "Footer navigation" [ref=e407]:
+          - listitem [ref=e408]:
+            - link "Terms" [ref=e409] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/github-terms/github-terms-of-service
+          - listitem [ref=e410]:
+            - link "Privacy" [ref=e411] [cursor=pointer]:
+              - /url: https://docs.github.com/site-policy/privacy-policies/github-privacy-statement
+          - listitem [ref=e412]:
+            - link "Security" [ref=e413] [cursor=pointer]:
+              - /url: https://github.com/security
+          - listitem [ref=e414]:
+            - link "Status" [ref=e415] [cursor=pointer]:
+              - /url: https://www.githubstatus.com/
+          - listitem [ref=e416]:
+            - link "Community" [ref=e417] [cursor=pointer]:
+              - /url: https://github.community/
+          - listitem [ref=e418]:
+            - link "Docs" [ref=e419] [cursor=pointer]:
+              - /url: https://docs.github.com/
+          - listitem [ref=e420]:
+            - link "Contact" [ref=e421] [cursor=pointer]:
+              - /url: https://support.github.com?tags=dotcom-footer
+          - listitem [ref=e422]:
+            - button "Manage cookies" [ref=e424] [cursor=pointer]
+          - listitem [ref=e425]:
+            - button "Do not share my personal information" [ref=e427] [cursor=pointer]
